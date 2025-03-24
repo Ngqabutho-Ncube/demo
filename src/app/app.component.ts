@@ -9,5 +9,20 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'git_intro';
-  user: string= "John,Doe";
+  cars = ["Quantum", "Volvo", "BMW"];
+  b1: Boolean = 7 < 10;
+  b2: boolean = 5+5==10;
+
+
+  constructor()  {
+    console.log (this.cars)
+    console.log (this.b1)
+    console.log (this.b2)
+
+   
+  }
+  
+  
+
 }
+
