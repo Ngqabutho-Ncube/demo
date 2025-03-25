@@ -1,28 +1,34 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  // imports: [RouterOutlet],
+   imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'git_intro';
   cars = ["Quantum", "Volvo", "BMW"];
-  b1: Boolean = 7 < 10;
-  b2: boolean = 5+5==10;
 
 
-  constructor()  {
-    console.log (this.cars)
-    console.log (this.b1)
-    console.log (this.b2)
+  foodPrices: number[] = [50, 120, 75, 200, 30, 300, 150, 20, 90, 400];
+  foodCategories: { price: number; category: string }[] = [];
 
-   
+  ngOnInit() {
+    this.categorizeFoodPrices();
   }
-  
-  
 
+  categorizeFoodPrices(){
+    this.foodCategories = this.foodPrices.map(price => ({
+      price,
+      category: price >= 100 ? 'Expensive' : 'Affordable', // Categorize food as Expensive or Affordable
+    }));
+  }
 }
+ 
+
+
+
+
 
