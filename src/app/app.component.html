@@ -1,24 +1,19 @@
-<div>
-    <p>Conny Has a Budget of R1000,So Conny wants to buy food that she can afford. So she is going to pick the food price from the  category which is affordable to her, from the table below : </p>
-    <h2>Food Price Categories</h2>
-    <table>
-      <thead>
-        <tr>
-          <th >Price</th>
-          <th >Category</th>
-        
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let food of foodCategories" [ngClass]="{ 'affordable-highlight': food.category === 'Affordable' }">
-            
-          <td >{{ food.price }}</td>
-          <td >{{ food.category }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
-  
+<table>
+  <thead>
+    <tr>
+      <th>Price
+        <button (click)="sortNumber()">
+          <span *ngIf="isSortedAsc">&#8593;</span>
+          <span *ngIf="!isSortedAsc">&#8593;</span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let number of sortFoodPrices">
+      <td>{{number}}</td>
+    </tr>
+  </tbody>
+</table>
 
- 
+<app-test></app-test>
