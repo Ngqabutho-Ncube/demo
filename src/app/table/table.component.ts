@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './table.component.css'
 })
 export class TableComponent {
+  names: string[] = ["Aureliou", "Ngqabutho", "Conny", "Cobus"];
+  surnames: string[] = ["Mthembu", "Ncube", "Moseri", "Van heerden"];
 
-  names: string[] = ["Aureliou","Ngqabutho","Conny","Cobus"];
-  surnames: string[] = ["Mthembu","Ncube","Moseri","Van heerden"];
+  sortedNames = this.names.sort();
 
   learnerBio = [
     {
@@ -18,7 +19,7 @@ export class TableComponent {
       surname: 'Moseri',
       age: 30,
       networth: 'R30',
-      location: 'Polokwane' 
+      location: 'Polokwane'
     },
 
     {
@@ -26,14 +27,32 @@ export class TableComponent {
       surname: 'Ncube',
       age: 18,
       networth: 'R3000',
-      location: 'Johannesburg'  
+      location: 'Johannesburg'
+    },
+
+    {
+      name: 'Aureliou',
+      surname: 'Mthembu',
+      age: 22,
+      networth: 'R20',
+      location: 'Johannesburg'
+    },
+    {
+      name: 'Jabulani',
+      surname: 'Makhanya',
+      age: 22,
+      networth: 'R25',
+      location: 'Bloemfontein'
     }
   ];
-;
 
-  
+  sortByName() {
+    this.learnerBio.sort((a, b) => a.name.localeCompare(b.name));
+  }
 
 
-  
+
+
+
 }
 

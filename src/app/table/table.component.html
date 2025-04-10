@@ -33,23 +33,25 @@
         <th>Name</th>
         <th>Surname</th>
     </tr>
-    <tr *ngFor="let name of names , let a of surnames">
-        <td>{{name}}</td>
+    <tr *ngFor="let b of surnames, let a of names">
         <td>{{a}}</td>
+        <td>{{b}}</td>
     </tr>
 </table>
 
 <h1>Draw table using object data</h1>
 <table>
     <thead>
+        <button (click)="sortByName()">Sort by name</button>
         <tr>
-            <th>Name</th>
+             <th >Name </th>
             <th>Place</th>
             <th>Surname</th>
             <th>Networth</th>
             <th>Age</th>
         </tr>
     </thead>
+    
     <tbody>
         <tr *ngFor="let q of learnerBio">
             <td>{{q.name}}</td>
@@ -58,5 +60,7 @@
             <td>{{q.networth}}</td>
             <td>{{q.age}}</td>
         </tr>
+
+        
     </tbody>
 </table>
