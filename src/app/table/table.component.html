@@ -1,0 +1,62 @@
+<h1>Draw table using random data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Aureliou</td>
+            <td>Mthembu</td>
+        </tr>
+        <tr>
+            <td>Conny</td>
+            <td>Moseri</td>
+        </tr>
+
+        <tr>
+            <td>Ngqabutho</td>
+            <td>Ncube</td>
+        </tr>
+        <tr>
+            <td>Cobus</td>
+            <td>Van heerden</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Draw table using variable data</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    <tr *ngFor="let name of names , let a of surnames">
+        <td>{{name}}</td>
+        <td>{{a}}</td>
+    </tr>
+</table>
+
+<h1>Draw table using object data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Place</th>
+            <th>Surname</th>
+            <th>Networth</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let q of learnerBio">
+            <td>{{q.name}}</td>
+            <td>{{q.location}}</td>
+            <td>{{q.surname}}</td>
+            <td>{{q.networth}}</td>
+            <td>{{q.age}}</td>
+        </tr>
+    </tbody>
+</table>

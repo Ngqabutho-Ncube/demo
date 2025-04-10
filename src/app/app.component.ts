@@ -3,15 +3,18 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
-import { TestComponent } from "./test/test.component";
+import { TableComponent } from "./table/table.component";
 
 @Component({
   selector: 'app-root',
-   imports: [CommonModule, TestComponent],
+   imports: [CommonModule, TableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
  
   
   //declared an inititalised array of type number 

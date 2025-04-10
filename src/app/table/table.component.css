@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+    width: 800px;
+}
+
+td,th {
+    border: 1px solid lightblue;
+    text-align: center;
+}
+
+h1 {
+    font-size:large;
+    background-color: dimgrey;
+    color: whitesmoke;
+    text-align: center;
+}
